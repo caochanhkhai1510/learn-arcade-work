@@ -1,42 +1,31 @@
-"""
-Platformer Game
-"""
+# Basic arcade program
+# Displays a white window with a blue circle in the middle
+
+# Imports
 import arcade
 
 # Constants
-SCREEN_WIDTH = 1000
-SCREEN_HEIGHT = 650
-SCREEN_TITLE = "Platformer"
+SCREEN_WIDTH = 1280
+SCREEN_HEIGHT = 720
+SCREEN_TITLE = "Welcome to Arcade"
+RADIUS = 150
 
+# Open the window
+arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
 
-class MyGame(arcade.Window):
-    """
-    Main application class.
-    """
+# Set the background color
+arcade.set_background_color(arcade.color.WHITE)
 
-    def __init__(self):
+# Clear the screen and start drawing
+arcade.start_render()
 
-        # Call the parent class and set up the window
-        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
+# Draw a blue circle
+arcade.draw_circle_filled(
+    SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, RADIUS, arcade.color.BLUE
+)
 
+# Finish drawing
+arcade.finish_render()
 
-    def setup(self):
-        """ Set up the game here. Call this function to restart the game. """
-        pass
-
-    def on_draw(self):
-        """ Render the screen. """
-
-        arcade.start_render()
-        # Code to draw the screen goes here
-
-
-def main():
-    """ Main method """
-    window = MyGame()
-    window.setup()
-    arcade.run()
-
-
-if __name__ == "__main__":
-    main()
+# Display everything
+arcade.run()
