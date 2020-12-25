@@ -4,25 +4,22 @@
 # Imports
 import arcade
 
+
 # Constants
-SCREEN_WIDTH = 1280
+SCREEN_WIDTH = 1080
 SCREEN_HEIGHT = 720
-SCREEN_TITLE = "Welcome to Arcade"
-RADIUS = 150
+SCREEN_TITLE = "Race Betting Game"
+RADIUS = 100
 
 # Open the window
 arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
 
 # Set the background color
-arcade.set_background_color(arcade.color.WHITE)
-
-# Clear the screen and start drawing
+arcade.set_background_color(arcade.color.SKY_BLUE)
+# Get ready to draw
 arcade.start_render()
 
-# Draw a blue circle
-arcade.draw_circle_filled(
-    SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, RADIUS, arcade.color.BLUE
-)
+# (The drawing code will go here.)
 
 # Finish drawing
 arcade.finish_render()
